@@ -317,7 +317,7 @@
 	      .call(function() {
 	        arrangeLabels("labelstext2")
 	      })
-		//I've commented out the wrap call as it's breaking it somehow		
+		//I've commented out the wrap call as it's breaking it somehow
 		  //.call(wrap,margin.right-30);
 
 
@@ -369,7 +369,7 @@
 	      .call(function() {
 	        arrangeLabels("mob")
 	      })
-				.call(wrap,margin.left-30);
+				// .call(wrap,margin.left-30);
 
 
 	    if (dvc.essential.ifValueShowRanks == true) {
@@ -388,7 +388,11 @@
 	            return y(d.rank[j].amt);
 	          })
 	          .attr("fill", "#008080")
-	          .attr("r", 10);
+	          .attr("r", function(d) {
+							if (d.rank[j] > 100) {
+								return 12;
+							} else {return 10}
+						});
 
 	        linegroupsg.append("text")
 	          .attr("class", "textno" + j)
@@ -436,7 +440,7 @@
 	        })
 	        .attr('x', chart_width + 30)
 	        .attr('text-anchor', 'start')
-					.call(wrap,margin.right-30);
+					// .call(wrap,margin.right-30);
 
 	      linegroups.append('text')
 	        .attr("class", "labelstext desk")
@@ -448,7 +452,7 @@
 	        })
 	        .attr('x', -25)
 	        .attr('text-anchor', 'end')
-					.call(wrap,margin.left-30);
+					// .call(wrap,margin.left-30);
 
 
 	      linegroups.append('text')
@@ -461,7 +465,7 @@
 	        })
 	        .attr('x', -20)
 	        .attr('text-anchor', 'end')
-					.call(wrap,margin.left-30);
+					// .call(wrap,margin.left-30);
 
 	    } else {
 	      linegroups.append('text')
@@ -474,7 +478,7 @@
 	        })
 	        .attr('x', chart_width + 30)
 	        .attr('text-anchor', 'start')
-					.call(wrap,margin.right-30);
+					// .call(wrap,margin.right-30);
 
 	      linegroups.append('text')
 	        .attr("class", "labelstext desk")
@@ -486,7 +490,7 @@
 	        })
 	        .attr('x', -25)
 	        .attr('text-anchor', 'end')
-					.call(wrap,margin.left-30);
+					// .call(wrap,margin.left-30);
 	    }
 
 	    for (var j = 0; j < lines[0].rank.length; j++) {
