@@ -4,21 +4,23 @@
     "useRanks":true,
     "timeFormat": "%Y",
     "timePeriods":[2014,2015,2016,2017,2018],
-    "colour_palette": ["#053D58", "#ABC149"],
+    "colour_palette": ["#003C57", "#0f8575"],
     "sourceText": ["Office for National Statistics"],
     "yAxisLabel":"Rank",
-    "yAxisBreak":21,
-    "yAxisBreakText":"Top 20 &#9650;"
+    "yAxisBreak":11,
+    "yAxisBreakText":"Top 10 &#9650;"
   },
 
   "optional": {
-    "margin_sm": [50, 150, 20, 15],
-    "margin_md": [50, 250, 20, 15],
-    "margin_lg": [50, 200, 20, 15],
+    "margin_sm": [50, 140, 20, 15],
+    "margin_md": [50, 140, 20, 15],
+    "margin_lg": [50, 160, 20, 15],
 
-    "aspectRatio_sm": [4, 24],
-    "aspectRatio_md": [5, 16],
-    "aspectRatio_lg": [6, 10],
+    "heightPer": {
+      "sm": 40,
+      "md": 35,
+      "lg": 35
+    },
 
     "mobileBreakpoint": 414,
     "tabletBreakpoint": 576
